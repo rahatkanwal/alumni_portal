@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="40%" stop-color="#0f4a2f"/>
+      <stop offset="100%" stop-color="#1a5f3f"/>
+    </linearGradient>
+    <linearGradient id="bld" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d3a25"/>
+      <stop offset="100%" stop-color="#082818"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="1920" height="1080" fill="url(#sky3)"/>
+
+  <!-- Sun/moon glow -->
+  <circle cx="1500" cy="280" r="80" fill="#fbbf24" fill-opacity="0.35"/>
+  <circle cx="1500" cy="280" r="50" fill="#fbbf24" fill-opacity="0.5"/>
+
+  <!-- Distant buildings silhouettes (university campus) -->
+  <g fill="url(#bld)" opacity="0.95">
+    <!-- Main administration building with dome -->
+    <rect x="700" y="600" width="520" height="350"/>
+    <!-- Dome -->
+    <path d="M 850 600 Q 960 480 1070 600 Z" fill="url(#bld)"/>
+    <!-- Spire on dome -->
+    <rect x="955" y="450" width="10" height="40"/>
+    <circle cx="960" cy="445" r="8"/>
+
+    <!-- Left wing building -->
+    <rect x="350" y="700" width="320" height="250"/>
+    <!-- Right wing building -->
+    <rect x="1250" y="680" width="350" height="270"/>
+
+    <!-- Clock tower (left) -->
+    <rect x="200" y="500" width="100" height="450"/>
+    <polygon points="200,500 250,420 300,500"/>
+    <circle cx="250" cy="560" r="22" fill="#fbbf24" fill-opacity="0.6"/>
+    <line x1="250" y1="560" x2="250" y2="545" stroke="#0d3a25" stroke-width="3"/>
+    <line x1="250" y1="560" x2="262" y2="560" stroke="#0d3a25" stroke-width="3"/>
+
+    <!-- Far right tower -->
+    <rect x="1650" y="550" width="80" height="400"/>
+    <polygon points="1650,550 1690,490 1730,550"/>
+  </g>
+
+  <!-- Building windows (warm yellow lights) -->
+  <g fill="#fbbf24" fill-opacity="0.7">
+    <!-- Main building windows -->
+    <rect x="740" y="650" width="20" height="30"/>
+    <rect x="790" y="650" width="20" height="30"/>
+    <rect x="840" y="650" width="20" height="30"/>
+    <rect x="1060" y="650" width="20" height="30"/>
+    <rect x="1110" y="650" width="20" height="30"/>
+    <rect x="1160" y="650" width="20" height="30"/>
+    <rect x="740" y="720" width="20" height="30"/>
+    <rect x="840" y="720" width="20" height="30"/>
+    <rect x="1060" y="720" width="20" height="30"/>
+    <rect x="1160" y="720" width="20" height="30"/>
+    <rect x="940" y="800" width="40" height="60"/>
+
+    <!-- Left wing -->
+    <rect x="380" y="740" width="18" height="25"/>
+    <rect x="420" y="740" width="18" height="25"/>
+    <rect x="460" y="740" width="18" height="25"/>
+    <rect x="500" y="740" width="18" height="25"/>
+    <rect x="540" y="740" width="18" height="25"/>
+    <rect x="380" y="800" width="18" height="25"/>
+    <rect x="460" y="800" width="18" height="25"/>
+    <rect x="540" y="800" width="18" height="25"/>
+
+    <!-- Right wing -->
+    <rect x="1280" y="720" width="18" height="25"/>
+    <rect x="1320" y="720" width="18" height="25"/>
+    <rect x="1360" y="720" width="18" height="25"/>
+    <rect x="1400" y="720" width="18" height="25"/>
+    <rect x="1450" y="720" width="18" height="25"/>
+    <rect x="1500" y="720" width="18" height="25"/>
+    <rect x="1280" y="780" width="18" height="25"/>
+    <rect x="1360" y="780" width="18" height="25"/>
+    <rect x="1450" y="780" width="18" height="25"/>
+  </g>
+
+  <!-- Trees (silhouettes) -->
+  <g fill="#082818">
+    <ellipse cx="100" cy="900" rx="60" ry="80"/>
+    <ellipse cx="170" cy="920" rx="50" ry="65"/>
+    <ellipse cx="1850" cy="910" rx="55" ry="70"/>
+    <ellipse cx="1780" cy="930" rx="45" ry="55"/>
+  </g>
+
+  <!-- Stars -->
+  <g fill="#ffffff" fill-opacity="0.7">
+    <circle cx="200" cy="150" r="2"/>
+    <circle cx="350" cy="80" r="1.5"/>
+    <circle cx="500" cy="200" r="2"/>
+    <circle cx="800" cy="120" r="1.5"/>
+    <circle cx="1100" cy="180" r="2"/>
+    <circle cx="1300" cy="100" r="1.5"/>
+    <circle cx="1750" cy="150" r="2"/>
+    <circle cx="1850" cy="220" r="1.5"/>
+    <circle cx="450" cy="350" r="1"/>
+    <circle cx="1650" cy="380" r="1.5"/>
+  </g>
+
+  <!-- Ground -->
+  <path d="M0 950 Q 960 920 1920 950 L1920 1080 L0 1080 Z" fill="#000000" fill-opacity="0.4"/>
+</svg>

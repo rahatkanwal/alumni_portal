@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Property Examples</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .section {
+            margin-bottom: 60px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 5px solid #667eea;
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .section p {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        .demo-box {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            margin: 20px 0;
+            background: white;
+            border-radius: 5px;
+            min-height: 200px;
+            position: relative;
+        }
+
+        /* Static Position Example */
+        .static-box {
+            position: static;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        /* Relative Position Example */
+        .relative-box {
+            position: relative;
+            background: #4ecdc4;
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .relative-moved {
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background: #45b7aa;
+        }
+
+        /* Absolute Position Example */
+        .absolute-container {
+            position: relative;
+            background: #ffe66d;
+            padding: 20px;
+            border-radius: 5px;
+            min-height: 150px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            background: #ffa07a;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .absolute-top-left {
+            top: 10px;
+            left: 10px;
+        }
+
+        .absolute-top-right {
+            top: 10px;
+            right: 10px;
+        }
+
+        .absolute-bottom-left {
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .absolute-bottom-right {
+            bottom: 10px;
+            right: 10px;
+        }
+
+        /* Fixed Position Example */
+        .fixed-box {
+            position: fixed;
+            background: #a8e6cf;
+            color: #333;
+            padding: 15px 25px;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        .fixed-top-right {
+            top: 20px;
+            right: 20px;
+        }
+
+        .fixed-bottom-right {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        /* Sticky Position Example */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background: #ff9ff3;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .scrollable-content {
+            height: 300px;
+            overflow-y: auto;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            border: 2px solid #ddd;
+        }
+
+        .content-item {
+            padding: 20px;
+            margin: 10px 0;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .highlight {
+            color: #f92672;
+        }
+
+        .property {
+            color: #66d9ef;
+        }
+
+        .value {
+            color: #a6e22e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 CSS Position Property - Examples</h1>
+
+        <!-- Static Position -->
+        <div class="section">
+            <h2>1. Position: Static (Default)</h2>
+            <p><strong>Static</strong> default position hai. Elements normal document flow mein rehte hain. Top, left, right, bottom properties kaam nahi karti.</p>
+            
+            <div class="code-block">
+                <span class="property">position</span>: <span class="value">static</span>;
+            </div>
+
+            <div class="demo-box">
+                <div class="static-box">Box 1 (Static)</div>
+                <div class="static-box">Box 2 (Static)</div>
+                <div class="static-box">Box 3 (Static)</div>
+            </div>
+        </div>
+
+        <!-- Relative Position -->
+        <div class="section">
+            <h2>2. Position: Relative</h2>
+            <p><strong>Relative</strong> position mein element apni original position ke relative move hota hai. Top, left, right, bottom properties use kar sakte hain.</p>
+            
+            <div class="code-block">
+                <span class="property">position</span>: <span class="value">relative</span>;<br>
+                <span class="property">top</span>: <span class="value">20px</span>;<br>
+                <span class="property">left</span>: <span class="value">30px</span>;
+            </div>
+
+            <div class="demo-box">
+                <div class="relative-box">Box 1 (Normal)</div>
+                <div class="relative-box relative-moved">Box 2 (Moved: top:20px, left:30px)</div>
+                <div class="relative-box">Box 3 (Normal)</div>
+            </div>
+        </div>
+
+        <!-- Absolute Position -->
+        <div class="section">
+            <h2>3. Position: Absolute</h2>
+            <p><strong>Absolute</strong> position mein element nearest positioned parent (relative/absolute/fixed) ke relative position leta hai. Agar koi positioned parent nahi hai, to document body ke relative position leta hai.</p>
+            
+            <div class="code-block">
+                <span class="property">position</span>: <span class="value">absolute</span>;<br>
+                <span class="property">top</span>: <span class="value">10px</span>;<br>
+                <span class="property">right</span>: <span class="value">10px</span>;
+            </div>
+
+            <div class="demo-box">
+                <div class="absolute-container">
+                    <div class="absolute-box absolute-top-left">Top Left</div>
+                    <div class="absolute-box absolute-top-right">Top Right</div>
+                    <div class="absolute-box absolute-bottom-left">Bottom Left</div>
+                    <div class="absolute-box absolute-bottom-right">Bottom Right</div>
+                    <p style="padding-top: 60px; color: #666;">Ye container relative position par hai, isliye absolute boxes iske relative position le rahe hain.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fixed Position -->
+        <div class="section">
+            <h2>4. Position: Fixed</h2>
+            <p><strong>Fixed</strong> position mein element viewport ke relative position leta hai. Page scroll karne par bhi element same jagah rehta hai. Navigation bars aur chat buttons ke liye perfect hai.</p>
+            
+            <div class="code-block">
+                <span class="property">position</span>: <span class="value">fixed</span>;<br>
+                <span class="property">top</span>: <span class="value">20px</span>;<br>
+                <span class="property">right</span>: <span class="value">20px</span>;
+            </div>
+
+            <div class="fixed-box fixed-top-right">
+                🔝 Fixed Top Right<br>
+                (Scroll karo - ye rahega yahi)
+            </div>
+
+            <div class="fixed-box fixed-bottom-right">
+                🔽 Fixed Bottom Right<br>
+                (Scroll karo - ye bhi rahega yahi)
+            </div>
+
+            <div class="demo-box" style="min-height: 400px;">
+                <p style="color: #666; padding: 20px;">Page scroll karo - fixed boxes hamesha same jagah rahenge!</p>
+            </div>
+        </div>
+
+        <!-- Sticky Position -->
+        <div class="section">
+            <h2>5. Position: Sticky</h2>
+            <p><strong>Sticky</strong> position relative aur fixed ka combination hai. Element tab tak relative rehta hai jab tak scroll nahi hota, phir fixed ho jata hai jab tak uska container visible hai.</p>
+            
+            <div class="code-block">
+                <span class="property">position</span>: <span class="value">sticky</span>;<br>
+                <span class="property">top</span>: <span class="value">0</span>;
+            </div>
+
+            <div class="demo-box">
+                <div class="sticky-header">
+                    📌 Sticky Header - Scroll karo aur dekho!
+                </div>
+                <div class="scrollable-content">
+                    <div class="content-item">Content Item 1</div>
+                    <div class="content-item">Content Item 2</div>
+                    <div class="content-item">Content Item 3</div>
+                    <div class="content-item">Content Item 4</div>
+                    <div class="content-item">Content Item 5</div>
+                    <div class="content-item">Content Item 6</div>
+                    <div class="content-item">Content Item 7</div>
+                    <div class="content-item">Content Item 8</div>
+                    <div class="content-item">Content Item 9</div>
+                    <div class="content-item">Content Item 10</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="section" style="background: #e8f5e9; border-left-color: #4caf50;">
+            <h2 style="color: #4caf50;">📝 Summary</h2>
+            <ul style="color: #555; line-height: 2; font-size: 1.1em; padding-left: 30px;">
+                <li><strong>Static:</strong> Default position, normal flow</li>
+                <li><strong>Relative:</strong> Apni jagah se relative move karta hai</li>
+                <li><strong>Absolute:</strong> Nearest positioned parent ke relative</li>
+                <li><strong>Fixed:</strong> Viewport ke relative, scroll par bhi same jagah</li>
+                <li><strong>Sticky:</strong> Relative se Fixed tak, scroll ke basis par</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+

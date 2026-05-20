@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f4a2f"/>
+      <stop offset="50%" stop-color="#1a5f3f"/>
+      <stop offset="100%" stop-color="#2d7a5a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots1" width="60" height="60" patternUnits="userSpaceOnUse">
+      <circle cx="30" cy="30" r="1.5" fill="#ffffff" fill-opacity="0.07"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#g1)"/>
+  <rect width="1920" height="1080" fill="url(#dots1)"/>
+  <ellipse cx="960" cy="540" rx="700" ry="500" fill="url(#glow)"/>
+
+  <!-- Decorative graduation caps (silhouettes) -->
+  <g fill="#ffffff" fill-opacity="0.08">
+    <!-- Cap 1 (large, top-left) -->
+    <g transform="translate(220 200) scale(1.4)">
+      <polygon points="0,40 80,10 160,40 80,70"/>
+      <rect x="60" y="60" width="40" height="6"/>
+      <path d="M100 65 Q 130 80 130 110 L 125 110 Q 125 88 100 78 Z"/>
+      <circle cx="130" cy="115" r="5"/>
+    </g>
+    <!-- Cap 2 (small, bottom-right) -->
+    <g transform="translate(1500 800) scale(1.1)">
+      <polygon points="0,40 80,10 160,40 80,70"/>
+      <rect x="60" y="60" width="40" height="6"/>
+      <path d="M100 65 Q 130 80 130 110 L 125 110 Q 125 88 100 78 Z"/>
+      <circle cx="130" cy="115" r="5"/>
+    </g>
+    <!-- Cap 3 (medium, top-right) -->
+    <g transform="translate(1600 250) scale(0.9) rotate(-15)">
+      <polygon points="0,40 80,10 160,40 80,70"/>
+      <rect x="60" y="60" width="40" height="6"/>
+    </g>
+    <!-- Cap 4 (left middle) -->
+    <g transform="translate(150 700) scale(0.8) rotate(10)">
+      <polygon points="0,40 80,10 160,40 80,70"/>
+      <rect x="60" y="60" width="40" height="6"/>
+    </g>
+  </g>
+
+  <!-- Floating diplomas/scrolls -->
+  <g fill="#ffffff" fill-opacity="0.06">
+    <rect x="350" y="850" width="100" height="14" rx="7" transform="rotate(-20 400 857)"/>
+    <rect x="1300" y="180" width="80" height="12" rx="6" transform="rotate(15 1340 186)"/>
+  </g>
+
+  <!-- Stars/sparkles -->
+  <g fill="#ffd700" fill-opacity="0.4">
+    <circle cx="400" cy="350" r="3"/>
+    <circle cx="1450" cy="400" r="4"/>
+    <circle cx="800" cy="180" r="2"/>
+    <circle cx="1700" cy="650" r="3"/>
+    <circle cx="280" cy="850" r="2"/>
+    <circle cx="1200" cy="900" r="3"/>
+  </g>
+
+  <!-- Bottom curve accent -->
+  <path d="M0 1080 L0 950 Q 960 850 1920 950 L1920 1080 Z" fill="#000000" fill-opacity="0.25"/>
+</svg>
