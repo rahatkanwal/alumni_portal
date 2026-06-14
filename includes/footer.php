@@ -81,7 +81,7 @@
                     </a>
                 </div>
                 <p class="text-gray-600 text-sm text-center md:text-right">
-                    ©2025 UAF Alumni. All rights reserved by The University of Agriculture Faisalabad
+                    ©2026 UAF Alumni. All rights reserved by The University of Agriculture Faisalabad <br> Developed By RAHAT KANWAL <br>
                 </p>
             </div>
         </div>
